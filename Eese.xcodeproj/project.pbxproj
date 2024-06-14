@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7F094A5F2C1BBB6300E5226D /* EeseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A5E2C1BBB6300E5226D /* EeseApp.swift */; };
-		7F094A612C1BBB6300E5226D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A602C1BBB6300E5226D /* ContentView.swift */; };
+		7F094A612C1BBB6300E5226D /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A602C1BBB6300E5226D /* TaskListView.swift */; };
 		7F094A632C1BBB6500E5226D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F094A622C1BBB6500E5226D /* Assets.xcassets */; };
 		7F094A662C1BBB6500E5226D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F094A652C1BBB6500E5226D /* Preview Assets.xcassets */; };
 		7F094A702C1BBB6500E5226D /* EeseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A6F2C1BBB6500E5226D /* EeseTests.swift */; };
 		7F094A7A2C1BBB6500E5226D /* EeseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A792C1BBB6500E5226D /* EeseUITests.swift */; };
 		7F094A7C2C1BBB6500E5226D /* EeseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A7B2C1BBB6500E5226D /* EeseUITestsLaunchTests.swift */; };
+		7F094A8A2C1BBFB100E5226D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A892C1BBFB100E5226D /* Task.swift */; };
+		7F094A8D2C1BC97D00E5226D /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A8C2C1BC97D00E5226D /* TaskCellViewModel.swift */; };
+		7F094A8F2C1BCD6B00E5226D /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F094A8E2C1BCD6B00E5226D /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		7F094A5B2C1BBB6300E5226D /* Eese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F094A5E2C1BBB6300E5226D /* EeseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeseApp.swift; sourceTree = "<group>"; };
-		7F094A602C1BBB6300E5226D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F094A602C1BBB6300E5226D /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		7F094A622C1BBB6500E5226D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F094A652C1BBB6500E5226D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F094A6B2C1BBB6500E5226D /* EeseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EeseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,9 @@
 		7F094A752C1BBB6500E5226D /* EeseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EeseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F094A792C1BBB6500E5226D /* EeseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeseUITests.swift; sourceTree = "<group>"; };
 		7F094A7B2C1BBB6500E5226D /* EeseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F094A892C1BBFB100E5226D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		7F094A8C2C1BC97D00E5226D /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		7F094A8E2C1BCD6B00E5226D /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,10 @@
 		7F094A5D2C1BBB6300E5226D /* Eese */ = {
 			isa = PBXGroup;
 			children = (
+				7F094A882C1BBF6C00E5226D /* Model */,
+				7F094A8B2C1BC94400E5226D /* ViewMeldel */,
 				7F094A5E2C1BBB6300E5226D /* EeseApp.swift */,
-				7F094A602C1BBB6300E5226D /* ContentView.swift */,
+				7F094A602C1BBB6300E5226D /* TaskListView.swift */,
 				7F094A622C1BBB6500E5226D /* Assets.xcassets */,
 				7F094A642C1BBB6500E5226D /* Preview Content */,
 			);
@@ -125,6 +133,23 @@
 				7F094A7B2C1BBB6500E5226D /* EeseUITestsLaunchTests.swift */,
 			);
 			path = EeseUITests;
+			sourceTree = "<group>";
+		};
+		7F094A882C1BBF6C00E5226D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F094A892C1BBFB100E5226D /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F094A8B2C1BC94400E5226D /* ViewMeldel */ = {
+			isa = PBXGroup;
+			children = (
+				7F094A8C2C1BC97D00E5226D /* TaskCellViewModel.swift */,
+				7F094A8E2C1BCD6B00E5226D /* TaskListViewModel.swift */,
+			);
+			path = ViewMeldel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F094A612C1BBB6300E5226D /* ContentView.swift in Sources */,
+				7F094A612C1BBB6300E5226D /* TaskListView.swift in Sources */,
+				7F094A8D2C1BC97D00E5226D /* TaskCellViewModel.swift in Sources */,
+				7F094A8F2C1BCD6B00E5226D /* TaskListViewModel.swift in Sources */,
+				7F094A8A2C1BBFB100E5226D /* Task.swift in Sources */,
 				7F094A5F2C1BBB6300E5226D /* EeseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,18 +450,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Eese/Preview Content\"";
+				DEVELOPMENT_TEAM = L6QQ7F3HBJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eese.Eese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -450,18 +479,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Eese/Preview Content\"";
+				DEVELOPMENT_TEAM = L6QQ7F3HBJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eese.Eese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
