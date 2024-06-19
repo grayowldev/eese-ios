@@ -15,6 +15,7 @@ struct TaskListView: View {
         
         NavigationView {
             VStack {
+                Text("Eese")
                 List(taskListVM.taskCellViewModel) { taskCellVM in
                     HStack {
                         Image(systemName: "circle")
