@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseFirestore
+
 
 class TaskViewModel: ObservableObject {
 //    @Published var tasks = [TodoTask]()
@@ -20,7 +22,13 @@ class TaskViewModel: ObservableObject {
     }
     
     func deleteTask(id: String) {
-        print("Deleted task with id: " + id)
+        print("Deleting task with id: " + id)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("tasks")
+            .document(id)
+            .delete()
     }
     
     func toggleStatus(task: TodoTask) {

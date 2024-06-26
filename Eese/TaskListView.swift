@@ -9,12 +9,15 @@ import SwiftUI
 import FirebaseFirestoreSwift
 
 struct TaskListView: View {
-    @StateObject var viewModel = TaskViewModel()
+    @StateObject var viewModel: TaskViewModel
     @FirestoreQuery var tasks: [TodoTask]
     
     init() {
         self._tasks = FirestoreQuery(
             collectionPath: "tasks"
+        )
+        self._viewModel = StateObject(
+            wrappedValue: TaskViewModel()
         )
     }
     
