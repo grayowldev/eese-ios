@@ -6,29 +6,73 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct TaskListView: View {
-    @ObservedObject var taskListVM = TaskListViewModel()
-    let task  = testDataTasks
+    @StateObject var viewModel = TaskViewModel()
+    @FirestoreQuery var tasks: [TodoTask]
+    
+    init() {
+        self._tasks = FirestoreQuery(
+            collectionPath: "tasks"
+        )
+    }
     
     var body: some View {
         
         NavigationView {
             VStack {
-                Text("Eese")
-                List(taskListVM.taskCellViewModel) { taskCellVM in
-                    HStack {
-                        Image(systemName: "circle")
-                        Text(taskCellVM.task.title)
-                    }
+                List(tasks) { task in
+//                    ForEach(viewModel.tasks){ task in
+                    TaskCellView(task: task)
+                        .swipeActions {
+                            Button {
+                                viewModel.deleteTask(id: task.id)
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(.red)
+                        }
+//                    }
                 }
-                
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("Add a new task")
-                })
+                .listStyle(PlainListStyle())
             }
+            .padding(.top, 20)
+            .navigationTitle("Tasks")
+            .toolbar {
+                Button {
+                    viewModel.showNewItemView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $viewModel.showNewItemView, content: {
+                NewTaskView()
+            })
         }
-        .navigationTitle("Task")
+        
+//        NavigationStack {
+//            ScrollView {
+//                LazyVStack {
+//                    ForEach(viewModel.tasks){ task in
+//                        TaskCellView(task: task)
+//                    }
+//                }
+//            }
+//            .padding(.top, 20)
+//            .navigationTitle("Tasks")
+//            .toolbar {
+//                Button {
+//                    viewModel.showNewItemView = true
+//                } label: {
+//                    Image(systemName: "plus")
+//                }
+//            }
+//            .sheet(isPresented: $viewModel.showNewItemView, content: {
+//                NewTaskView()
+//            })
+//        }
+        
     }
 }
 
